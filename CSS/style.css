@@ -33,7 +33,11 @@ font-family: 'WorkSans-Regular';
     padding: 0 15px;
 }
 /* container css ends */
+/* by grid css starts */
 /* banner_grid_complete CSS starts */
+.banner{
+    height: 800px;
+}
 .banner_grid_complete{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -89,20 +93,112 @@ font-family: 'WorkSans-Regular';
 }
 /* right column css ends */
 /* banner_grid_complete CSS ends */
-@media  only screen and (max-width:576px){
-    .banner_grid_complete{
-        grid-template-columns: 1fr;
-        gap: 180px;
-    }
-        .left_column h1 {
-            font-size: 32px;
-            width: 100%;
-            padding-top: 40px;
-        }
-        .right_first_para,
-        .right_second_para {
-            font-size: 15px;
-            padding-left: 10px;
-        }
-    
+/* by grid css ends */
+/* by flex starts */
+/* home-flex section css starts  */
+.home-flex{
+    padding-top: 40px;
 }
+.home-complete{
+    display: flex;
+}
+/* left column css starts */
+.star-wars{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 50%;
+}
+.star-wars h1{
+    font-family: 'Noticia';
+    font-size: 50px;
+    width: 70%;
+    padding-top: 90px
+}
+.star-wars p{
+    font-weight: 100;
+    font-size: 17px;
+    width: 89%;
+    padding-bottom: 20px;
+    line-height: 25px;
+}
+.star-wars img{
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+}
+/* left column css ends */
+/* right column css starts */
+.solo-trailer{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.solo-trailer iframe{
+    height: 300px;
+    width: 100%;
+}
+.solo-trailer p:first-of-type{
+    font-size: 17px;
+    width: 95%;
+    font-weight: 100;
+    padding-left: 80px;
+    line-height: 25px;
+}
+.solo-trailer p:last-of-type{
+    font-size: 17px;
+    font-weight: 100;
+    width: 95%;
+    padding-left: 80px;
+    line-height: 25px;
+}
+/* right column css ends */
+/* home-flex section css ends */
+/* by flex ends */
+/* media query starts for both grid and flex */
+@media  only screen and (max-width:576px){
+  .banner_grid_complete{
+    grid-template-columns: 1fr;
+    gap: 100px;
+  }
+  .left_column h1 {
+    font-size: 32px;
+    width: 100%;
+    padding-top: 40px;
+  }
+  .right_first_para,
+  .right_second_para {
+    font-size: 15px;
+    padding-left: 10px;
+  }
+  .home-flex{
+    padding-top: 400px;
+  }
+  .home-complete{
+    flex-direction: column;
+    gap: 30px;
+  }
+  .star-wars{
+    width: 100%;
+  }
+  .star-wars h1{
+    width: 100%;
+    font-size: 35px;
+  }
+  .star-wars p{
+    width: 100%;
+  }
+  .solo-trailer{
+    width: 100%;
+  }
+  .solo-trailer p:first-of-type{
+    padding-left: 10px;
+    font-size: 15px;
+  }
+  .solo-trailer p:last-of-type{
+    padding-left: 10px;
+    font-size: 15px;
+  }
+}
+
