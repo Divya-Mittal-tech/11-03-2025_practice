@@ -89,4 +89,20 @@ font-family: 'WorkSans-Regular';
 }
 /* right column css ends */
 /* banner_grid_complete CSS ends */
-
+@media  only screen and (max-width:576px){
+    .banner_grid_complete{
+        grid-template-columns: 1fr;
+        gap: 180px;
+    }
+        .left_column h1 {
+            font-size: 32px;
+            width: 100%;
+            padding-top: 40px;
+        }
+        .right_first_para,
+        .right_second_para {
+            font-size: 15px;
+            padding-left: 10px;
+        }
+    
+}
